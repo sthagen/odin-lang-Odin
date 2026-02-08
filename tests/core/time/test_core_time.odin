@@ -2,7 +2,7 @@ package test_core_time
 
 import "core:testing"
 import "core:time"
-import "core:log"
+@(require) import "core:log"
 import dt "core:time/datetime"
 import tz "core:time/timezone"
 
