@@ -369,7 +369,7 @@ test_convert_timezone_roundtrip :: proc(t: ^testing.T) {
 
 	when ODIN_OS == .FreeBSD {
 		// NOTE(Jeroen): This works on my local FreeBSD 15 VM, but fails on the CI.
-		log.info("FreeBSD quirk: Failed to load local timezone")
+		log.infof("[FreeBSD quirk] Failed to load local timezone: %v", local_load_ok)
 		return
 	} else {
 		testing.expectf(t, local_load_ok, "Failed to load local timezone")
